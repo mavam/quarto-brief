@@ -1,0 +1,40 @@
+title: Brief
+author: Matthias Vallentin
+version: 1.0.0
+quarto-required: ">=1.2.0"
+contributes:
+  formats:
+    common:
+      date: today
+      date-format: long
+    pdf:
+      documentclass: scrlttr2
+      classoption:
+        - fontsize=12pt
+        - parskip=full
+        - paper=A4
+        - fromalign=right
+        - fromphone=true
+        - fromemail=true
+        - version=last
+       #- foldmarks=false
+      include-in-header:
+        - text: |
+            \usepackage{eurosym}
+            \usepackage{graphicx}
+            \usepackage{pdfpages}
+            \usepackage[utf8]{inputenc}
+            \usepackage[ngerman]{babel}
+            %\usepackage{fontawesome}
+            \KOMAoptions{fontsize=12pt}
+            \KOMAoptions{firstfoot=false}
+            \KOMAoptions{enlargefirstpage=on}
+            \KOMAoptions{parskip=half}
+            \KOMAoptions{fromphone}
+            %\setkomafont{fromname}{\scshape}
+            %\setkomafont{fromaddress}{\scshape}
+            %\renewcaptionname{ngerman}{\enclname}{Anlagen} % default: Anlage(n)
+      template-partials:
+        - partials/_address.tex
+        - partials/before-body.tex
+        - partials/after-body.tex

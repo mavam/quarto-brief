@@ -1,0 +1,42 @@
+\setkomavar{fromname}{$author$}
+\setkomavar{fromaddress}{${by-author:_address.tex()}}
+
+$for(authors/first)$
+$if(it.phone)$
+\setkomavar{fromphone}[]{$it.phone$}
+\KOMAoptions{fromphone}
+$endif$
+$endfor$
+
+$for(authors/first)$
+$if(it.email)$
+\setkomavar{fromemail}[]{$it.email$}
+\KOMAoptions{fromemail}
+$endif$
+$endfor$
+
+$if(signature)$
+\setkomavar{signature}{
+%  \includegraphics[scale=0.25]{signature}\\
+  %\bigskip\\
+  \usekomavar{fromname}
+}
+$endif$
+
+$if(customer)$
+\setkomavar{customer}[$customer.key$]{$customer.value$}
+$endif$
+
+$if(subject)$
+\setkomavar{subject}{$subject$}
+$endif$
+
+\begin{letter}{
+  $for(address)$%
+    $address$$sep$\\
+  $endfor$
+}
+
+$if(opening)$
+\opening{$opening$}
+$endif$
