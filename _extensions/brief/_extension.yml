@@ -3,10 +3,11 @@ author: Matthias Vallentin
 version: 1.0.0
 quarto-required: ">=1.2.0"
 contributes:
+  lang: de
   formats:
     common:
       date: today
-      date-format: long
+      date-format: DD. MMMM YYYY
     pdf:
       documentclass: scrlttr2
       classoption:
@@ -24,7 +25,6 @@ contributes:
             \usepackage{graphicx}
             \usepackage{pdfpages}
             \usepackage[utf8]{inputenc}
-            \usepackage[ngerman]{babel}
             %\usepackage{fontawesome}
             \KOMAoptions{fontsize=12pt}
             \KOMAoptions{firstfoot=false}
