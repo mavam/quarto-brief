@@ -3,13 +3,13 @@ author: Matthias Vallentin
 version: 1.0.0
 quarto-required: ">=1.2.0"
 contributes:
-  lang: de
-  babel-lang: ngerman
   formats:
     common:
       date: today
-      date-format: DD. MMMM YYYY
+      date-format: long
     pdf:
+      lang: de
+      babel-lang: ngerman
       documentclass: scrlttr2
       classoption:
         - fontsize=12pt
