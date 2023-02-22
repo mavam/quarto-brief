@@ -1,19 +1,53 @@
 \setkomavar{fromname}{$author$}
+
+% We currently format the address in German layout. There might be a more
+% powerful way to synthesize language-agnostic address block.
 \setkomavar{fromaddress}{${by-author:_address.tex()}}
 
 $for(authors/first)$
 $if(it.phone)$
 \setkomavar{fromphone}[]{$it.phone$}
-\KOMAoptions{fromphone}
+\KOMAoptions{fromphone=true}
 $endif$
 $endfor$
 
 $for(authors/first)$
 $if(it.email)$
 \setkomavar{fromemail}[]{$it.email$}
-\KOMAoptions{fromemail}
+\KOMAoptions{fromemail=true}
 $endif$
 $endfor$
+
+$for(authors/first)$
+$if(it.url)$
+\setkomavar{fromurl}[]{$it.url$}
+\KOMAoptions{fromurl=true}
+$endif$
+$endfor$
+
+% Geschäftszeichenzeile
+$if(yourmail)$
+\setkomavar{yourmail}{$yourmail$}
+$endif$
+$if(yourref)$
+\setkomavar{yourref}{$yourref$}
+$endif$
+$if(myref)$
+\setkomavar{myref}{$myref$}
+$endif$
+$if(customer)$
+\setkomavar{customer}{$customer$}
+$endif$
+$if(invoice)$
+\setkomavar{invoice}{$invoice$}
+$endif$
+$if(place)$
+\setkomavar{place}{$place$}
+$endif$
+
+$if(subject)$
+\setkomavar{subject}{$subject$}
+$endif$
 
 $if(signature)$
 \setkomavar{signature}{
@@ -21,14 +55,6 @@ $if(signature)$
   %\bigskip\\
   \usekomavar{fromname}
 }
-$endif$
-
-$if(customer)$
-\setkomavar{customer}[$customer.key$]{$customer.value$}
-$endif$
-
-$if(subject)$
-\setkomavar{subject}{$subject$}
 $endif$
 
 \begin{letter}{
