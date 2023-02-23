@@ -16,7 +16,7 @@ Then adapt the example as you see fit.
 
 ## Format Options
 
-The sample [example.qmd](example.qmd) demonstrates all available tuning knobs.
+The sample [template.qmd](template.qmd) demonstrates all available tuning knobs.
 Many options are directly lifted from the `scrlttr2` class.
 
 ## Credits
