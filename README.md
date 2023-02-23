@@ -9,7 +9,7 @@ This quarto extension provides a letter template that adheres to the German [DIN
 Install the extension and example qmd file as follows:
 
 ```bash
-quarto use template mavam/brief
+quarto use template mavam/quarto-brief
 ```
 
 Then adapt the example as you see fit.
