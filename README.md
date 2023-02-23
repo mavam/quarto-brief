@@ -1,23 +1,26 @@
-# DIN Brief Format
+# Brief — DIN 5008 compliant letters with Quarto
 
-## Installing
+This quarto extension provides a letter template that adheres to the German [DIN
+5008](https://de.wikipedia.org/wiki/DIN_5008) requirements, based on the
+`scrlttr2` LaTeX document class.
+
+## Usage
+
+Install the extension and example qmd file as follows:
 
 ```bash
 quarto use template mavam/brief
 ```
 
-This will install the extension and create an example qmd file that you can use
-as a starting place for your article.
-
-## Using
-
-*TODO*: Describe how to use your format.
+Then adapt the example as you see fit.
 
 ## Format Options
 
-*TODO*: If your format has options that can be set via document metadata,
-describe them.
+The sample [example.qmd](example.qmd) demonstrates all available tuning knobs.
+Many options are directly lifted from the `scrlttr2` class.
 
-## Example
+## Credits
 
-Here is the source code for a minimal sample document: [example.qmd](example.qmd).
+I got inspired by Mickaël Canouil's
+[quarto-letter](https://github.com/mcanouil/quarto-letter) extension, but needed
+something that adheres to DIN 5008.
