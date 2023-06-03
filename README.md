@@ -56,6 +56,9 @@ sansfontoptions:
 ---
 ```
 
+For more involved letters, you may want to consider setting `monofont` and
+`mathfont` and their respective options.
+
 ## Credits
 
 I got inspired by Mickaël Canouil's
