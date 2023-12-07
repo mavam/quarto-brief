@@ -57,6 +57,10 @@ $if(signature)$
 }
 $endif$
 
+$if(fontsize)$
+\KOMAoptions{fontsize=$fontsize$}
+$endif$
+
 \begin{letter}{
   $for(address)$%
     $address$$sep$\\
