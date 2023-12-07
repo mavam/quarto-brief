@@ -61,6 +61,10 @@ $if(fontsize)$
 \KOMAoptions{fontsize=$fontsize$}
 $endif$
 
+\makeatletter
+\renewcommand*{\raggedsignature}{\raggedright}
+\makeatother
+
 \begin{letter}{
   $for(address)$%
     $address$$sep$\\
