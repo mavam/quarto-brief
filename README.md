@@ -19,6 +19,18 @@ Then adapt the example as you see fit.
 The sample [template.qmd](template.qmd) demonstrates all available tuning knobs.
 Many options are directly lifted from the `scrlttr2` class.
 
+### Setting the Font Size
+
+The default font size is 12pt. To specify a different size for the document, use the YAML option 'fontsize'
+
+```yaml
+---
+fontsize: 11pt
+---
+```
+
+Any TeX-compatible unit should work, like e.g. `ex`, `in` or `mm`. However, to avoid layout breaks, it is recommended to use one of the most common sizes `10pt`, `11pt` or `12pt`.
+
 ### Customize Fonts
 
 You can adjust fonts by adjusting Quarto's [PDF font
