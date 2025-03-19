@@ -21,7 +21,8 @@ Many options are directly lifted from the `scrlttr2` class.
 
 ### Setting the Font Size
 
-The default font size is 12pt. To specify a different size for the document, use the YAML option 'fontsize'
+The default font size is 12pt. To specify a different size for the document, use
+the YAML option 'fontsize'
 
 ```yaml
 ---
@@ -29,16 +30,18 @@ fontsize: 11pt
 ---
 ```
 
-Any TeX-compatible unit should work, like e.g. `ex`, `in` or `mm`. However, to avoid layout breaks, it is recommended to use one of the most common sizes `10pt`, `11pt` or `12pt`.
+Any TeX-compatible unit should work, like e.g. `ex`, `in` or `mm`. However, to
+avoid layout breaks, it is recommended to use one of the most common sizes
+`10pt`, `11pt` or `12pt`.
 
 ### Customize Fonts
 
 You can adjust fonts by adjusting Quarto's [PDF font
 options](https://quarto.org/docs/reference/formats/pdf.html#fonts).
 
-To use a different font, say [Roboto](https://fonts.google.com/specimen/Roboto),
-downloading the font archive and unpack to get the TTF files. We use these
-below:
+To use a different font, e.g.
+[Roboto](https://fonts.google.com/specimen/Roboto), download and unpack the font
+archive to get the TTF files. We use these in the example below:
 
 - `Roboto-Bold.ttf`
 - `Roboto-BoldItalic.ttf`
