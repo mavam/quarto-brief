@@ -14,10 +14,15 @@ address:
   - Quuxstraße 314
   - 4711 Garply
   - Xyzzilien
+yourmail_label: Ihre Mail
 yourmail: 1. Januar 2023
+yourref_label: Ihre Nummer
 yourref: 123
+myref_label: Meine Nummer
 myref: 456
+customer_label: Kunde
 customer: 789
+invoice_label: Rechnung
 invoice: "001"
 subject: Betreffzeile
 opening: Sehr geehrte Damen und Herren,
