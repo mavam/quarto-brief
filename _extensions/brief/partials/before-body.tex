@@ -74,6 +74,18 @@ $else$
 $endif$
 $endif$
 
+$if(date)$
+$if(date_label)$
+\setkomavar{date}[$date_label$]{$date$}
+$else$
+\setkomavar{date}{$date$}
+$endif$
+$else$
+$if(date_label)$
+\setkomavar{date}[$date_label$]{}
+$endif$
+$endif$
+
 $if(subject)$
 \setkomavar{subject}{$subject$}
 $endif$
