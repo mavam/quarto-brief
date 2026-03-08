@@ -40,7 +40,7 @@ ich möchte Ihnen einen Briefkopf kompatibel zu DIN 5008 vorstellen. Briefe
 schreiben ist jetzt endlich einfach! So machen wir es:
 
 1. Ein neues Verzeichnis anlegen
-2. Die Briefvorlage verwenden: `quarto use template mavam/brief`
+2. Die Briefvorlage verwenden: `quarto use template mavam/quarto-brief`
 3. YAML Metadaten adaptieren
 4. Brief in Markdown schreiben
 5. PDF erstellen: `quarto render template.qmd`
