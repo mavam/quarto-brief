@@ -1,0 +1,23 @@
+{
+  "Brief format setup": {
+    "prefix": "format",
+    "body": [
+      "format:",
+      "  brief-pdf: default"
+    ],
+    "description": "Enable the Brief PDF format for a document."
+  },
+  "Brief letter metadata": {
+    "prefix": "letter",
+    "body": [
+      "subject: ${1:Project update}",
+      "opening: ${2:Dear team,}",
+      "closing: ${3:Kind regards,}",
+      "address:",
+      "  - ${4:Recipient Name}",
+      "  - ${5:Street 1}",
+      "  - ${6:City}"
+    ],
+    "description": "Insert common letter metadata fields used by Brief."
+  }
+}

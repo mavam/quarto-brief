@@ -1,0 +1,55 @@
+$schema: https://m.canouil.dev/quarto-wizard/assets/schema/v1/extension-schema.json
+
+formats:
+  brief-pdf:
+    subject:
+      type: string
+      description: Subject line shown before the letter body.
+    opening:
+      type: string
+      description: Greeting line before the main letter content.
+    closing:
+      type: string
+      description: Complimentary close before the signature block.
+    signature:
+      type: string
+      description: Path to a signature image shown above sender name.
+      completion:
+        type: file
+        extensions: [.png, .jpg, .jpeg, .svg]
+    address:
+      type: array
+      description: Recipient address lines.
+      items:
+        type: string
+    date:
+      type: string
+      description: Explicit letter date value.
+    date_label:
+      type: string
+      description: Label caption used for the date field.
+    place:
+      type: string
+      description: Location shown in the heading block.
+    place_label:
+      type: string
+      description: Label caption used for the location field.
+    yourref:
+      type: string
+      description: Recipient reference value.
+    myref:
+      type: string
+      description: Sender reference value.
+    fontsize:
+      type: string
+      description: Base document font size such as 10pt, 11pt, or 12pt.
+    cc:
+      type: array
+      description: Carbon copy recipients listed at letter end.
+      items:
+        type: string
+    encl:
+      type: array
+      description: Enclosure labels listed at letter end.
+      items:
+        type: string
