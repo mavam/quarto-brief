@@ -1,0 +1,13 @@
+name: Check field sync
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  check-sync:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: bash scripts/check-sync.sh

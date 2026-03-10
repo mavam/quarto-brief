@@ -34,12 +34,36 @@ formats:
     place_label:
       type: string
       description: Label caption used for the location field.
+    yourmail:
+      type: string
+      description: Incoming correspondence reference value.
+    yourmail_label:
+      type: string
+      description: Label caption used for the incoming mail field.
     yourref:
       type: string
       description: Recipient reference value.
+    yourref_label:
+      type: string
+      description: Label caption used for the recipient reference field.
     myref:
       type: string
       description: Sender reference value.
+    myref_label:
+      type: string
+      description: Label caption used for the sender reference field.
+    customer:
+      type: string
+      description: Customer identifier value.
+    customer_label:
+      type: string
+      description: Label caption used for the customer field.
+    invoice:
+      type: string
+      description: Invoice number value.
+    invoice_label:
+      type: string
+      description: Label caption used for the invoice field.
     fontsize:
       type: string
       description: Base document font size such as 10pt, 11pt, or 12pt.
@@ -48,6 +72,9 @@ formats:
       description: Carbon copy recipients listed at letter end.
       items:
         type: string
+    ps:
+      type: string
+      description: Optional postscript appended after the closing.
     encl:
       type: array
       description: Enclosure labels listed at letter end.
