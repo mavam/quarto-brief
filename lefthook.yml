@@ -1,0 +1,7 @@
+pre-push:
+  parallel: true
+  commands:
+    check-sync:
+      run: bash scripts/check-sync.sh
+    actionlint:
+      run: if command -v actionlint >/dev/null; then actionlint; fi
