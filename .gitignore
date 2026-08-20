@@ -1,2 +1,5 @@
+.DS_Store
 *.ttf
-template.pdf
+/*.pdf
+/.quarto/
+**/*.quarto_ipynb

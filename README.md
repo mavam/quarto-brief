@@ -4,15 +4,17 @@ This quarto extension provides a letter template that adheres to the German [DIN
 5008](https://de.wikipedia.org/wiki/DIN_5008) requirements, based on the
 `scrlttr2` LaTeX document class.
 
-## 🚀 Usage
+## 🚀 Installation
 
-Install the extension and example qmd file as follows:
+Install [Quarto](https://quarto.org/docs/get-started/) and a TeX distribution
+such as [TinyTeX](https://quarto.org/docs/output-formats/pdf-engine.html#tinytex),
+then create a letter from the template:
 
-```bash
+```sh
 quarto use template mavam/quarto-brief
 ```
 
-Then adapt the example as you see fit.
+Adapt the generated `template.qmd` as needed.
 
 ## ⚙️ Format options
 
@@ -107,3 +109,7 @@ For more involved letters, you may want to consider setting `monofont` and
 I got inspired by Mickaël Canouil's
 [quarto-letter](https://github.com/mcanouil/quarto-letter) extension, but needed
 something that adheres to DIN 5008.
+
+## 📄 License
+
+[MIT](LICENSE.md)

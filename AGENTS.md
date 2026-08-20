@@ -1,23 +1,26 @@
 # quarto-brief
 
-`quarto-brief` is a Quarto extension for DIN 5008-compliant German letters based
-on the `scrlttr2` LaTeX class.
+`quarto-brief` renders DIN 5008-compliant German PDF letters with Quarto and
+the KOMA-Script `scrlttr2` class.
 
 ## Setup
 
 Install Lefthook once per clone:
 
-```bash
+```sh
 uvx lefthook install
 ```
 
-Pushing runs the quality gates automatically. Don't run checks manually.
+Pushing checks that frontmatter fields remain synchronized. GitHub Actions
+runs the same validation and renders the example for pull requests and changes
+to `main`. No need to run checks manually.
 
 ## Field changes
 
-Update `_extensions/brief/_snippets.json` when a field belongs in the common
-insertion snippet. Keep every supported field in `template.qmd`, then render it:
+Keep every supported field aligned across the canonical templates in
+`_extensions/brief/partials/`, the Quarto Wizard schema in
+`_extensions/brief/_schema.yml`, the user-facing reference in `README.md`, and
+the complete example in `template.qmd`.
 
-```bash
-quarto render template.qmd
-```
+Update `_extensions/brief/_snippets.json` when a field belongs in the common
+insertion snippet. Snippets are representative, not exhaustive.
