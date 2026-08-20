@@ -1,4 +1,4 @@
-# ✉️ Brief — DIN 5008 compliant letters with Quarto
+# 📮 Brief — DIN 5008 compliant letters with Quarto
 
 This quarto extension provides a letter template that adheres to the German [DIN
 5008](https://de.wikipedia.org/wiki/DIN_5008) requirements, based on the
