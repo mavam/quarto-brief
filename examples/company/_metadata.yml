@@ -1,0 +1,29 @@
+# Shared letterhead settings for every letter in this directory. All company
+# details are fictional.
+lang: de
+date: today
+date-format: long
+format:
+  brief-typst:
+    fontsize: 11pt
+    text_color: "#1A1A1A"
+    muted_color: "#4A5568"
+    reference_label_font: DejaVu Sans Mono
+    reference_label_size: 7.5pt
+    letterhead_logo: assets/logo.svg
+    letterhead_logo_width: 40mm
+    backaddress: Example GmbH · Musterweg 5 · 10115 Berlin
+    footer_columns:
+      - - Example GmbH
+        - Musterweg 5
+        - 10115 Berlin
+      - - https://example.com
+        - info@example.com
+        - +49 30 0000000
+      - - Amtsgericht Berlin
+        - HRB 000000
+        - USt-IdNr. DE000000000
+        - "Geschäftsführung: Erika Beispiel"
+      - - "Bank: Beispielbank"
+        - "IBAN: DE00 0000 0000 0000 0000 00"
+        - "BIC: EXAMDEXXXXX"

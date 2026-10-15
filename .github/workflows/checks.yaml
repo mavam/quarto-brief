@@ -34,10 +34,8 @@ jobs:
       - name: Set up Quarto
         uses: quarto-dev/quarto-actions/setup@v2
 
-      - name: Set up TinyTeX
-        uses: r-lib/actions/setup-tinytex@v2
-        env:
-          TINYTEX_INSTALLER: TinyTeX
+      - name: Install Poppler
+        run: sudo apt-get update && sudo apt-get install --yes poppler-utils
 
-      - name: Render example
-        run: quarto render .
+      - name: Render and inspect letters
+        run: bash scripts/test-typst.sh

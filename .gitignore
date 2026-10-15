@@ -3,3 +3,7 @@
 /*.pdf
 /.quarto/
 **/*.quarto_ipynb
+/.build/
+examples/**/*.pdf
+tests/**/*.pdf
+__pycache__/

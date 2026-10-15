@@ -1,25 +1,14 @@
 title: Brief
 author: Matthias Vallentin
-version: 1.0.0
-quarto-required: ">=1.2.0"
+version: 2.0.0
+quarto-required: ">=1.10.0"
 contributes:
   formats:
-    common:
+    typst:
       date: today
       date-format: long
-    pdf:
       lang: de
-      babel-lang: ngerman
-      documentclass: scrlttr2
-      classoption:
-        - paper=A4
-        - fromalign=right # Ausrichtung des Briefkopfes
-        - version=last
-      include-in-header:
-        - text: |
-            \usepackage{eurosym}
-            \usepackage{pdfpages}
+      papersize: a4
       template-partials:
-        - partials/_address.tex
-        - partials/before-body.tex
-        - partials/after-body.tex
+        - partials/typst-template.typ
+        - partials/typst-show.typ

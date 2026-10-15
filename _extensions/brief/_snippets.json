@@ -3,9 +3,9 @@
     "prefix": "format",
     "body": [
       "format:",
-      "  brief-pdf: default"
+      "  brief-typst: default"
     ],
-    "description": "Enable the Brief PDF format for a document."
+    "description": "Enable the Brief Typst format for a document."
   },
   "Brief letter metadata": {
     "prefix": "letter",

@@ -1,0 +1,54 @@
+---
+format: brief-typst
+author:
+  - name: Erika Beispiel
+    email: erika.beispiel@example.com
+    phone: +49 123 4567890
+    url: https://example.com
+    affiliation:
+      - address: Foostraße 42
+        postal-code: 1337
+        city: Barstadt
+        country: Bazmanien
+address:
+  - Corge Grault
+  - Quuxstraße 314
+  - 4711 Garply
+  - Xyzzilien
+date: 2023-02-15
+date_label: Datum
+place_label: Ort
+place: Barstadt
+yourmail_label: Ihre Mail
+yourmail: 1. Januar 2023
+yourref_label: Ihre Nummer
+yourref: 123
+myref_label: Meine Nummer
+myref: 456
+customer_label: Kunde
+customer: 789
+invoice_label: Rechnung
+invoice: "001"
+subject: Betreffzeile
+opening: Sehr geehrte Damen und Herren,
+closing: Mit freundlichem Gruß
+encl:
+  - Anlage 1
+  - Anlage 2
+cc:
+  - Waldo Fred
+ps: |
+  PS: Lorem ipsum dolor sit amet, *consectetur* adipiscing elit.
+---
+
+ich möchte Ihnen einen Briefkopf nach dem Vorbild von DIN 5008 vorstellen.
+Briefe schreiben ist jetzt endlich einfach! So machen wir es:
+
+1. Ein neues Verzeichnis anlegen
+2. Die Briefvorlage verwenden: `quarto use template mavam/quarto-brief`
+3. YAML Metadaten adaptieren
+4. Brief in Markdown schreiben
+5. PDF erstellen: `quarto render letter.qmd`
+
+Verbesserungsvorschläge nehme ich gerne als GitHub Issue unter
+<https://github.com/mavam/quarto-brief> entgegen.

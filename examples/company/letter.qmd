@@ -1,0 +1,25 @@
+---
+format: brief-typst
+author:
+  - name: Erika Beispiel
+    phone: "+49 30 0000001"
+    email: erika.beispiel@example.com
+address:
+  - Musterfirma GmbH
+  - Max Mustermann
+  - Musterstraße 1
+  - 12345 Musterstadt
+subject: "Musterbrief"
+opening: "Sehr geehrter Herr Mustermann,"
+closing: "Mit freundlichen Grüßen"
+myref: "Q-2026-001"
+myref_label: "Angebotsnummer"
+date_label: "Datum"
+---
+
+dies ist ein Musterbrief auf einem Firmenbriefbogen. Er zeigt Logo,
+Absenderangaben, Anschriftenfeld, Bezugszeichenzeile und die
+Unternehmensangaben im Fußbereich.
+
+Die Angaben zum Unternehmen stehen gemeinsam in einer Metadatendatei, sodass jeder
+Brief in diesem Verzeichnis denselben Briefbogen nutzt.

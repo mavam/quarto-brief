@@ -1,7 +1,7 @@
 $schema: https://m.canouil.dev/quarto-wizard/assets/schema/v1/extension-schema.json
 
 formats:
-  brief-pdf:
+  brief-typst:
     subject:
       type: string
       description: Subject line shown before the letter body.
@@ -80,3 +80,40 @@ formats:
       description: Enclosure labels listed at letter end.
       items:
         type: string
+    backaddress:
+      type: string
+      description: Return-address line above the recipient window. Defaults to the sender name and address.
+    letterhead_logo:
+      type: string
+      description: Path to a logo image shown at the top right of the first page.
+      completion:
+        type: file
+        extensions: [.svg, .png, .jpg, .jpeg]
+    letterhead_logo_width:
+      type: string
+      description: Logo width as a Typst length such as 38mm.
+    letterhead_background:
+      type: [string, boolean]
+      description: Typst file or image drawn behind the first page from its top-left corner; false disables it.
+      completion:
+        type: file
+        extensions: [.typ, .svg, .png, .jpg, .jpeg]
+    footer_columns:
+      type: array
+      description: Footer columns on every page, each a list of lines.
+      items:
+        type: array
+        items:
+          type: string
+    text_color:
+      type: string
+      description: Main text color as a hex value such as "#0E1017".
+    muted_color:
+      type: string
+      description: Color for the contact block, return address, footer, and reference labels.
+    reference_label_font:
+      type: string
+      description: Font family for the reference-row labels; values keep the main font.
+    reference_label_size:
+      type: string
+      description: Reference-row label size as a Typst length such as 7.5pt.

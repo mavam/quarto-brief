@@ -1,0 +1,55 @@
+---
+format: brief-typst
+lang: de
+fontsize: 11pt
+author:
+  - name: Erika Beispiel
+    phone: "+49 30 0000000"
+    email: erika@example.org
+backaddress: Beispiel GmbH · Musterweg 5 · 10115 Berlin
+footer_columns:
+  - [Beispiel GmbH, Musterweg 5, 10115 Berlin]
+  - [https://example.org, info@example.org]
+  - [Amtsgericht Berlin, HRB 000000, "Geschäftsführung: Erika Beispiel,", Max Beispiel]
+  - ["IBAN: DE00 0000 0000 0000 0000 00", "BIC: TESTDEFFXXX"]
+address:
+  - Musterfirma GmbH
+  - Abteilung Einkauf
+  - Postfach 12 34
+  - 54321 Musterstadt
+date: 2026-03-01
+place: Berlin
+subject: Mehrseitiger Testbrief
+opening: Sehr geehrte Damen und Herren,
+closing: Mit freundlichen Grüßen
+signature: signature.svg
+letterhead_background: background.typ
+ps: "PS: Dieser Brief prüft Seitenumbrüche."
+encl:
+  - Angebot
+cc:
+  - Buchhaltung
+  - Vertrieb
+---
+
+{{< lipsum 4 >}}
+
+Aufzählung mit Spiegelstrichen:
+
+- Erster Punkt mit etwas längerem Text, der über mehrere Zeilen laufen
+  kann, damit Einrückung und Blocksatz sichtbar werden.
+- Zweiter Punkt
+  - Verschachtelter Punkt
+
+Nummerierte Liste:
+
+1. Eins
+2. Zwei
+3. Drei
+
+{{< lipsum 5-9 >}}
+
+| Position | Menge | Preis |
+|----------|------:|------:|
+| Beratung |     3 | 900 € |
+| Lizenz   |     1 | 500 € |
