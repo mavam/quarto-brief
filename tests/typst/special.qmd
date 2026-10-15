@@ -1,0 +1,30 @@
+---
+format: brief-typst
+lang: en
+author: "Ann O'Neil & Co. #1"
+date: "15. October 2026"
+place: "Springfield"
+address:
+  - "Dr. Jane \"JJ\" Doe_Smith"
+  - "c/o 50% Off $ales <Dept> [B] @ *Main*"
+  - "1. Floor, 742 Evergreen Terrace"
+  - "- Unit 3 / Rear = Back"
+yourref: "#42_A"
+myref: "AB-$100"
+invoice: "2026/007"
+customer: "C-7 ~ 100%"
+subject: "Re: \"Quotes\", $5 & <tags> #hash mail@example.com _under_ *star*"
+opening: "Dear Ms. Doe,"
+closing: "Best regards,"
+letterhead_background: background.svg
+encl:
+  - "1. Contract (2×)"
+  - "Price list #3"
+cc:
+  - "Legal & Compliance"
+---
+
+Body with special characters: # $ % & _ { } ~ ^ \ < > @ [ ] and an em dash — done.
+
+1. First item
+2. Second item

@@ -1,0 +1,19 @@
+---
+format: brief-typst
+lang: en
+author:
+  - name: Jane Doe
+    affiliation:
+      - address: 1 Example Road
+        postal-code: "12345"
+        city: Springfield
+address:
+  - John Roe
+  - 2 Sample Street
+  - 54321 Shelbyville
+date: 2026-03-01
+subject: Long letter without footer
+closing: Sincerely,
+---
+
+{{< lipsum 1-12 >}}

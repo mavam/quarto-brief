@@ -1,0 +1,10 @@
+---
+format: brief-typst
+address:
+  - Erika Musterfrau
+  - Musterstraße 1
+  - 12345 Musterstadt
+---
+
+Dieser Brief nutzt nur Pflichtangaben: keine Absenderdaten, kein Betreff,
+keine Anrede, keine Grußformel und keine Fußzeile.

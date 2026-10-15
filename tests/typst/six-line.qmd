@@ -1,0 +1,16 @@
+---
+format: brief-typst
+fontsize: 12pt
+date: "2026-10-15"
+address:
+  - Beispiel GmbH
+  - Abteilung Vertragsmanagement
+  - z. Hd. Erika Beispiel
+  - Gebäude 2
+  - Beispielstraße 17
+  - 20095 Hamburg
+subject: "Sechszeiliger Empfänger"
+opening: "Sehr geehrte Frau Beispiel,"
+---
+
+Alle sechs Anschriftzeilen müssen vollständig in die Anschriftzone passen.

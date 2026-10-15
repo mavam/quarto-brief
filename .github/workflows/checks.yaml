@@ -41,3 +41,19 @@ jobs:
 
       - name: Render example
         run: quarto render .
+
+  typst:
+    name: Typst
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Quarto
+        uses: quarto-dev/quarto-actions/setup@v2
+
+      - name: Install Poppler
+        run: sudo apt-get update && sudo apt-get install --yes poppler-utils
+
+      - name: Render and inspect Typst letters
+        run: bash scripts/test-typst.sh

@@ -130,6 +130,29 @@ sansfontoptions:
   - BoldItalicFont=*-BoldItalic
 ```
 
+## Typst format (experimental)
+
+Set `format: brief-typst` to render with Typst instead of LaTeX. It needs no
+TeX installation and accepts every field above. Additional fields:
+
+- `backaddress` — return-address line above the recipient window. Defaults to
+  the sender name and address.
+- `letterhead_logo` / `letterhead_logo_width` — logo at the top right of the
+  first page, for example `assets/logo.svg` and `38mm`.
+- `letterhead_background` — Typst file or image drawn behind the first page
+  only, from the top-left page corner. Set `false` to turn it off.
+- `footer_columns[][]` — footer columns on every page, each a list of lines.
+- `text_color` / `muted_color` — hex colors for the text and for the contact
+  block, return address, and footer. A set `muted_color` also colors the
+  reference-row labels.
+- `reference_label_font` / `reference_label_size` — font family and Typst
+  length for the reference-row labels only, for example `DejaVu Sans Mono` and
+  `7.5pt`. Values, body, and other text keep `mainfont`.
+
+Use Quarto's `mainfont` and `font-paths` for fonts. `fontsize` must be a
+Typst length such as `11pt`. See `examples/company` for a letterhead that
+keeps these settings in `_metadata.yml`.
+
 ## Common Use Cases
 
 ### Formal business letter

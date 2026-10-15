@@ -23,3 +23,9 @@ contributes:
         - partials/_address.tex
         - partials/before-body.tex
         - partials/after-body.tex
+    typst:
+      lang: de
+      papersize: a4
+      template-partials:
+        - partials/typst-template.typ
+        - partials/typst-show.typ

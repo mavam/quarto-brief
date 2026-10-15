@@ -80,3 +80,119 @@ formats:
       description: Enclosure labels listed at letter end.
       items:
         type: string
+  brief-typst:
+    subject:
+      type: string
+      description: Subject line shown before the letter body.
+    opening:
+      type: string
+      description: Greeting line before the main letter content.
+    closing:
+      type: string
+      description: Complimentary close before the signature block.
+    signature:
+      type: string
+      description: Path to a signature image shown above sender name.
+      completion:
+        type: file
+        extensions: [.png, .jpg, .jpeg, .svg]
+    address:
+      type: array
+      description: Recipient address lines.
+      items:
+        type: string
+    date:
+      type: string
+      description: Explicit letter date value.
+    date_label:
+      type: string
+      description: Label caption used for the date field.
+    place:
+      type: string
+      description: Location shown in the heading block.
+    place_label:
+      type: string
+      description: Label caption used for the location field.
+    yourmail:
+      type: string
+      description: Incoming correspondence reference value.
+    yourmail_label:
+      type: string
+      description: Label caption used for the incoming mail field.
+    yourref:
+      type: string
+      description: Recipient reference value.
+    yourref_label:
+      type: string
+      description: Label caption used for the recipient reference field.
+    myref:
+      type: string
+      description: Sender reference value.
+    myref_label:
+      type: string
+      description: Label caption used for the sender reference field.
+    customer:
+      type: string
+      description: Customer identifier value.
+    customer_label:
+      type: string
+      description: Label caption used for the customer field.
+    invoice:
+      type: string
+      description: Invoice number value.
+    invoice_label:
+      type: string
+      description: Label caption used for the invoice field.
+    fontsize:
+      type: string
+      description: Base document font size such as 10pt, 11pt, or 12pt.
+    cc:
+      type: array
+      description: Carbon copy recipients listed at letter end.
+      items:
+        type: string
+    ps:
+      type: string
+      description: Optional postscript appended after the closing.
+    encl:
+      type: array
+      description: Enclosure labels listed at letter end.
+      items:
+        type: string
+    backaddress:
+      type: string
+      description: Return-address line above the recipient window. Defaults to the sender name and address.
+    letterhead_logo:
+      type: string
+      description: Path to a logo image shown at the top right of the first page.
+      completion:
+        type: file
+        extensions: [.svg, .png, .jpg, .jpeg]
+    letterhead_logo_width:
+      type: string
+      description: Logo width as a Typst length such as 38mm.
+    letterhead_background:
+      type: [string, boolean]
+      description: Typst file or image drawn behind the first page from its top-left corner; false disables it.
+      completion:
+        type: file
+        extensions: [.typ, .svg, .png, .jpg, .jpeg]
+    footer_columns:
+      type: array
+      description: Footer columns on every page, each a list of lines.
+      items:
+        type: array
+        items:
+          type: string
+    text_color:
+      type: string
+      description: Main text color as a hex value such as "#0E1017".
+    muted_color:
+      type: string
+      description: Color for the contact block, return address, footer, and reference labels.
+    reference_label_font:
+      type: string
+      description: Font family for the reference-row labels; values keep the main font.
+    reference_label_size:
+      type: string
+      description: Reference-row label size as a Typst length such as 7.5pt.

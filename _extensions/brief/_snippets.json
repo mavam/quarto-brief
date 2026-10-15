@@ -7,6 +7,14 @@
     ],
     "description": "Enable the Brief PDF format for a document."
   },
+  "Brief Typst format setup": {
+    "prefix": "format-typst",
+    "body": [
+      "format:",
+      "  brief-typst: default"
+    ],
+    "description": "Enable the experimental Brief Typst format for a document."
+  },
   "Brief letter metadata": {
     "prefix": "letter",
     "body": [
