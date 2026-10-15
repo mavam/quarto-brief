@@ -267,7 +267,7 @@ def check_generic(pdf):
     check_blank_band(name, pdf)
     doc = pages(pdf)
     content = expect_text(name, pdf, [
-        "Matthias Vallentin, Foostraße 42, 1337 Barstadt, Bazmanien",
+        "Erika Beispiel, Foostraße 42, 1337 Barstadt, Bazmanien",
         "https://example.com",
         "Ihre Nummer", "Ihre Mail", "Meine Nummer", "Kunde", "Rechnung", "Datum",
         "1. Januar 2023", "Ort", "Barstadt", "15. Februar 2023", "Betreffzeile",
@@ -284,6 +284,30 @@ def check_generic(pdf):
     check(len(families) == 1, f"{name}: reference labels changed font ({families})")
     check(runs.get("Ihre Nummer", (0, 0, ""))[2] == runs.get("Betreffzeile", (0, 0, "?"))[2],
           f"{name}: reference labels changed color")
+
+
+def check_template(pdf):
+    name = "template"
+    check_blank_band(name, pdf)
+    check_fold_marks(pdf)
+    doc = pages(pdf)
+    check(len(doc) == 1, f"{name}: expected 1 page, got {len(doc)}")
+    content = expect_text(name, pdf, [
+        "Erika Beispiel, Foostraße 42, 1337 Barstadt, Bazmanien",
+        "erika.beispiel@example.com", "+49 123 4567890",
+        "Corge Grault Quuxstraße 314 4711 Garply Xyzzilien",
+        "Ihre Nummer", "Ihre Mail", "Meine Nummer", "Kunde", "Rechnung", "Datum",
+        "1. Januar 2023", "15. Februar 2023", "Betreffzeile",
+        "Sehr geehrte Damen und Herren,", "quarto render template.qmd",
+        "Anlagen Anlage 1 Anlage 2",
+        "PS: Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    ])
+    expect_order(name, content, ["Ihre Nummer", "Ihre Mail", "Meine Nummer", "Kunde", "Rechnung", "Datum"])
+    expect_order(name, content, ["Betreffzeile", "Sehr geehrte", "Mit freundlichem Gruß", "PS:", "Anlagen"])
+    expect_absent(name, pdf, ["Seite 1", "Kopie an"])
+    corge = find(doc[0], "Corge")
+    check(corge and near(corge[0][0], 25, 0.1) and 62.7 <= corge[0][1] < 68,
+          f"{name}: recipient not at 25 mm in the window zone")
 
 
 def check_multipage(pdf):
@@ -361,6 +385,7 @@ def check_special(pdf):
 def main():
     out = Path(sys.argv[1])
     checks = {
+        "template.pdf": check_template,
         "examples/company/letter.pdf": check_company,
         "examples/generic/letter.pdf": check_generic,
         "tests/typst/multipage.pdf": check_multipage,
@@ -383,7 +408,7 @@ def main():
     if failures:
         print("\n".join(f"FAIL: {f}" for f in failures))
         sys.exit(1)
-    print(f"✓ {len(checks) + 1} Typst PDFs passed layout, text, and raster checks.")
+    print(f"✓ {len(checks) + 1} PDFs passed layout, text, and raster checks.")
 
 
 if __name__ == "__main__":

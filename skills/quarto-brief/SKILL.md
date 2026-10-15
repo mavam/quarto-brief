@@ -5,8 +5,10 @@ description: Draft, edit, and render DIN 5008-style letters with Quarto. Use for
 
 # Quarto Brief
 
-Create DIN 5008-compliant German-style letters using Quarto with the `brief-pdf`
-format. The extension uses the `scrlttr2` LaTeX document class.
+Create German letters in the DIN 5008 Form B layout using Quarto with the
+`brief-typst` format. It renders with the Typst engine bundled in Quarto 1.10
+or later and needs no TeX installation. The layout follows published Form B
+dimensions but isn't certified against the full DIN 5008 standard.
 
 ## Rendering
 
@@ -24,7 +26,7 @@ quarto add mavam/quarto-brief
 
 ## Writing a Letter
 
-Every `.qmd` file must set `format: brief-pdf` and provide frontmatter for
+Every `.qmd` file must set `format: brief-typst` and provide frontmatter for
 sender, recipient, and letter metadata. The body is plain Markdown placed after
 the frontmatter.
 
@@ -32,7 +34,7 @@ the frontmatter.
 
 ```yaml
 ---
-format: brief-pdf
+format: brief-typst
 author:
   - name: Jane Doe
     email: jane@example.com
@@ -44,7 +46,7 @@ author:
 address:
   - Max Mustermann
   - Beispielweg 42
-  - :0331 München
+  - 80331 München
 subject: Ihr Schreiben vom 1. März 2026
 opening: Sehr geehrter Herr Mustermann,
 closing: Mit freundlichen Grüßen
@@ -103,37 +105,24 @@ Add business reference lines that appear below the letterhead:
 
 ### Font size
 
-The default is 12pt. Override with:
+The default is 12pt. Override with a Typst length such as `11pt` or `4mm`:
 
 ```yaml
 fontsize: 11pt
 ```
 
-### Custom fonts
+### Fonts
 
-Adjust `mainfont` and `sansfont` for the letter body and address fields:
+Use Quarto's `mainfont` and `font-paths`. Prefer fonts that Typst bundles or
+ship font files with the letter:
 
 ```yaml
 mainfont: Roboto
-mainfontoptions:
-  - Extension=.ttf
-  - UprightFont=*-Regular
-  - BoldFont=*-Bold
-  - ItalicFont=*-Italic
-  - BoldItalicFont=*-BoldItalic
-sansfont: Roboto
-sansfontoptions:
-  - Extension=.ttf
-  - UprightFont=*-Regular
-  - BoldFont=*-Bold
-  - ItalicFont=*-Italic
-  - BoldItalicFont=*-BoldItalic
+font-paths:
+  - assets/fonts
 ```
 
-## Typst format (experimental)
-
-Set `format: brief-typst` to render with Typst instead of LaTeX. It needs no
-TeX installation and accepts every field above. Additional fields:
+### Letterhead fields
 
 - `backaddress` — return-address line above the recipient window. Defaults to
   the sender name and address.
@@ -149,9 +138,20 @@ TeX installation and accepts every field above. Additional fields:
   length for the reference-row labels only, for example `DejaVu Sans Mono` and
   `7.5pt`. Values, body, and other text keep `mainfont`.
 
-Use Quarto's `mainfont` and `font-paths` for fonts. `fontsize` must be a
-Typst length such as `11pt`. See `examples/company` for a letterhead that
-keeps these settings in `_metadata.yml`.
+Keep shared letterhead settings in a `_metadata.yml` next to the letters. See
+`examples/company` in the extension repository.
+
+### Layout limits
+
+- The recipient address holds at most six lines and must fit the window zone;
+  overflow is a render error.
+- Frontmatter values are Markdown. Escape a leading `@` or `<tag>`.
+
+### Migrating from `brief-pdf`
+
+The LaTeX-based `brief-pdf` format no longer exists. Change the format to
+`brief-typst` and replace LaTeX font options such as `sansfont` or
+`mainfontoptions` with `mainfont` and `font-paths`.
 
 ## Common Use Cases
 

@@ -1,8 +1,8 @@
 ---
 format: brief-typst
 author:
-  - name: Matthias Vallentin
-    email: matthias@example.com
+  - name: Erika Beispiel
+    email: erika.beispiel@example.com
     phone: +49 123 4567890
     url: https://example.com
     affiliation:

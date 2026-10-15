@@ -1,8 +1,8 @@
-# Typst letter geometry audit
+# Letter geometry audit
 
-The Typst backend targets **Form B**, using the published dimensions below.
-This is not a certification of conformity with DIN 5008:2020. The full
-normative text has not been checked. The legacy LaTeX backend is unchanged.
+The `brief-typst` format targets **Form B**, using the published dimensions
+below. This is not a certification of conformity with DIN 5008:2020. The full
+normative text has not been checked.
 
 ## Coordinate system and zones
 
@@ -84,7 +84,7 @@ establish compliance.
   Those agency-specific logo dimensions are not used here.
 - [Wikimedia Form A illustration](https://upload.wikimedia.org/wikipedia/commons/6/64/DIN_5008%2C_Form_A.svg):
   distinguishes the 20 mm window boundary from the 25 mm text edge.
-- KOMA-Script's `DIN.lco` letter-class option file served as an implementation
+- KOMA-Script's `DIN.lco` letter-class option file served as a layout
   reference. It is not a substitute for the normative DIN text.
 
 ## Remaining verification

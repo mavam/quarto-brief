@@ -1,8 +1,8 @@
 ---
-format: brief-pdf
+format: brief-typst
 author:
-  - name: Matthias Vallentin
-    email: matthias@example.com
+  - name: Erika Beispiel
+    email: erika.beispiel@example.com
     phone: +49 123 4567890
     affiliation:
       - address: Foostraße 42
@@ -36,8 +36,8 @@ ps: |
   PS: Lorem ipsum dolor sit amet, *consectetur* adipiscing elit.
 ---
 
-ich möchte Ihnen einen Briefkopf kompatibel zu DIN 5008 vorstellen. Briefe
-schreiben ist jetzt endlich einfach! So machen wir es:
+ich möchte Ihnen einen Briefkopf nach dem Vorbild von DIN 5008 vorstellen.
+Briefe schreiben ist jetzt endlich einfach! So machen wir es:
 
 1. Ein neues Verzeichnis anlegen
 2. Die Briefvorlage verwenden: `quarto use template mavam/quarto-brief`

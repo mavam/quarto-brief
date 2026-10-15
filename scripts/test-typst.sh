@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 #
-# Render the brief-typst examples and fixtures, then inspect the PDFs.
+# Render the root template, examples, and fixtures, then inspect the PDFs.
 #
 # Outputs go to .build/typst (ignored by Git). Set RASTER=1 to also write PNG
 # previews to .build/typst/png for visual review.
@@ -13,6 +13,7 @@ out=.build/typst
 rm -rf "$out"
 
 inputs=(
+  template.qmd
   examples/generic/letter.qmd
   examples/company/letter.qmd
   tests/typst/minimal.qmd
